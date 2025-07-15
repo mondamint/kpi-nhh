@@ -11,11 +11,8 @@ import DataEntry from "./pages/DataEntry";
 import Reports from "./pages/Reports";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
-
 const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
+const App = () => <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
@@ -24,7 +21,7 @@ const App = () => (
           <div className="min-h-screen flex w-full">
             <AppSidebar />
             <div className="flex-1">
-              <header className="h-12 flex items-center border-b bg-background px-4">
+              <header className="h-12 flex items-center border-b px-4 bg-zinc-50">
                 <SidebarTrigger className="mr-2" />
                 <h1 className="text-sm font-medium text-muted-foreground">
                   ระบบติดตาม KPI โรงพยาบาลหนองหิน
@@ -45,7 +42,5 @@ const App = () => (
         </SidebarProvider>
       </BrowserRouter>
     </TooltipProvider>
-  </QueryClientProvider>
-);
-
+  </QueryClientProvider>;
 export default App;
