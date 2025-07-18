@@ -72,7 +72,7 @@ const DataEntry = () => {
     { value: "12", label: "ธันวาคม" }
   ];
 
-  const years = ["2024", "2023", "2022"];
+  const years = ["2025"];
 
   const getStatusColor = (status: string) => {
     switch (status) {
